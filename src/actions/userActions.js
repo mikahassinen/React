@@ -72,6 +72,7 @@ export function getUserById(userId) {
   };
 }
 
+// TODO Extra
 function setPostRequestMessage({ dispatch, type, subject, message, }) {
   if (type ==='error') {
     dispatch({ type: USER_REQUEST_ERROR, payload: { subject, message: message || '(╯°□°)╯︵ ┻━┻', }, });

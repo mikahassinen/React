@@ -26,6 +26,7 @@ import ReactReduxExercise from './containers/ReactReduxExercise';
 import UsingRestApis from './containers/UsingRestApis';
 import Users from './containers/UsingRestApisExercise/Users';
 import Todos from './containers/UsingRestApisExercise/Todos';
+import Extra from './components/Extra';
 
 const middlewares = [ thunk, ];
 
@@ -61,6 +62,7 @@ const root = (
           <IndexRoute relative components={Users} />
           <Route path=':userId' relative component={Todos} />
         </Route>
+        <Route path='extra' component={Extra} />
       </Route>
     </Router>
   </Provider>

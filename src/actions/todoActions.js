@@ -39,7 +39,7 @@ export function addTodo(description){
   };
 }
 
-// No need to use this if you do not absolutely want to
+// TODO Extra
 function setPostRequestMessage({ dispatch, type, subject, message, }) {
   if (type ==='error') {
     dispatch({ type: TODOS_REQUEST_ERROR, payload: { subject, message: message || '(╯°□°)╯︵ ┻━┻', }, });

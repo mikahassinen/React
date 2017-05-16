@@ -7,10 +7,15 @@ export default class UsingRestApis extends React.Component {
 
   state = { status: 'idle', data: {}, };
 
+  // Why is this a bad implementation?
   fetchApiDescription = async () => {
-    this.setState({ status: 'fetching data', });
-    const { data, } = await axios.get('/');
-    this.setState({ status: 'data fetched', data, });
+    if (this.state.status!=='fetching data') {
+      this.setState({ status: 'fetching data', });
+      const { data, } = await axios.get('/');
+      this.setState({ status: 'data fetched', data, });
+    } else {
+      console.log('busy');
+    }
   };
 
   render() {

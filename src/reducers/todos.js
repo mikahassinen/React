@@ -25,7 +25,6 @@ function content(state = {}, { type, payload, }) {
   }
 }
 
-//This part of the reducer is extra. Do not use your time figuring this out unless you are done whit everything else
 function request(state = { pending: {}, error: {}, success: {}, }, { type, payload, }) {
   switch (type) {
     case START_TODOS_REQUEST: {

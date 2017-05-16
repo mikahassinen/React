@@ -1,6 +1,7 @@
 import React from 'react';
 import RemoveIcon from './RemoveIcon';
 
+// TODO  make Todo item overlined / strikedout id done
 const { string, bool, func, } = React.PropTypes;
 const TodoItem = ({ id, description, done, onDoneToggle, onRemove, }) => (
   <div className='todo-item'>
