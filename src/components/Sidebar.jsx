@@ -11,6 +11,7 @@ const LINKS = [
   { path: '/Redux', name: 'Redux', },
   { path: '/reactRedux', name: 'React Redux', exercise: true, },
   { path: '/usingRestApis', name: 'Using Rest apis', exercise: true, },
+  { path: '/extra', name: 'Extra', },
 ];
 
 export default class Sidebar extends React.Component {
