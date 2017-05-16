@@ -12,6 +12,12 @@ import { keys, } from 'common/utils';
 * AnimateImageList sets the removed items css class to 'image-shrink-out'
 * Ones animation has finished then AnimateImageList removes the image from its state.
 */
+/*
+
+AnimationImageList has fundamel build in error.
+What happens if user re-clicks image toggle before it has been animated out?
+TODO Extra: If you code has this issue fix it
+*/
 
 const { object, } = React.PropTypes;
 class AnimateImageList extends React.Component {
@@ -33,7 +39,7 @@ class AnimateImageList extends React.Component {
   // Set the initial images before component mount
   componentWillMount() {
     // shallow copy props images
-    let { ...propsImages } = this.props.images;
+    const { ...propsImages } = this.props.images;
     const images = mapNewImages(propsImages);
     this.setState({ images, });
   }
