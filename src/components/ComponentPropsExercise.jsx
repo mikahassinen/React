@@ -7,8 +7,8 @@ const { func, string, } = React.PropTypes;
 /* ValidateInput is a component that displays error when user has typed in something that isn't valid
  TODO
  1. onBlur check if input value is valid and set state to invalid if it isn't.
- 2. when user re-enters input, when first typing in invalid value
-  set state to invalid:false ones input text validates to true
+ 2. when user re-enters input, and starts re-typing state of ValidateInput 'invalid'
+ stays true until props.validate returns true
 */
 class ValidateInput extends React.Component {
 
