@@ -43,6 +43,7 @@ export default class Todos extends React.Component {
 
   componentDidMount() {
     const { userId, } = this.props.params;
+    
     // TODO fetch user by id and todos by userId
   }
 

@@ -9,6 +9,7 @@ export default class UsingRestApis extends React.Component {
 
   // Why is this a bad implementation?
   fetchApiDescription = async () => {
+      console.log('start fetchApiDescription');
     if (this.state.status!=='fetching data') {
       this.setState({ status: 'fetching data', });
       const { data, } = await axios.get('/');

@@ -40,17 +40,14 @@ class AnimateImageList extends React.Component {
             ImgWhiteCollar: {
                 src: whiteCollar,
                 isRemoved: true,
-                isAnimating: false
             },
             imgCandidate: {
                 src: candidate,
                 isRemoved: false,
-                isAnimating: false
             },
             imgGrumpy: {
                 src: grumpy,
                 isRemoved: false,
-                isAnimating: false
             },
 
         }
@@ -96,13 +93,6 @@ class AnimateImageList extends React.Component {
             });
     }
 
-    handleLoginClick() {
-        this.setState({isAnimating: true});
-    }
-
-    handleLogoutClick() {
-        this.setState({isAnimating: false});
-    }
 
     setTimeoutToRemoveImage(key) { // (nothing to do here)
         // remove image after 0.4seconds
@@ -155,7 +145,7 @@ class ImageList extends React.Component {
 
     render() {
         const {images,} = this.state;
-        const isLoggedIn = this.state.isAnimating;
+
 
         return (
             <div className='note-exercise-m'>
